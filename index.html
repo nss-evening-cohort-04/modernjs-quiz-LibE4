@@ -1,0 +1,136 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Robot Battledome</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+
+<body>
+
+  <article id="game-container">
+    <!-- to get player name -->
+    <section id="player-setup" class="card card--name">
+      <div class="card__prompt">
+        <h1>Robot War</h1>
+      </div>
+
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-6">
+			        <div>Name for Robot I</div>
+			        <div class="field">
+			          <input type="text" autofocus="true" id="player-a" class="field__textinput">
+			        </div>
+              <div class="input-group"><h2>Select Robot Model:</h2>
+                <select id="robot-a" value="" class="form-control">
+                  <option value="">--</option>
+                  <option value="Aerial Drone">Aerial Drone</option>
+                  <option value="Aerial Bipedal">Aerial Bipedal</option>
+                  <option value="Aerial ATV">Aerial ATV</option>
+                  <option value="Ground Bipedal">Ground Bipedal</option>
+                  <option value="Ground Drone">Ground Drone</option>
+                  <option value="Ground ATV">Ground ATV</option>
+                </select>
+              </div><!-- /input-group -->
+          </div>
+        
+          <div class="col-sm-6">
+              <div>Name for Robot II</div>
+              <div class="field">
+                <input type="text" autofocus="true" id="player-b" class="field__textinput">
+              </div>
+              <div class="input-group"><h2>Select Robot Model:</h2>
+                <select id="robot-b" value="" class="form-control">
+                  <option value="">--</option>
+                  <option value="Aerial Drone">Aerial Drone</option>
+                  <option value="Aerial Bipedal">Aerial Bipedal</option>
+                  <option value="Aerial ATV">Aerial ATV</option>
+                  <option value="Ground Bipedal">Ground Bipedal</option>
+                  <option value="Ground Drone">Ground Drone</option>
+                  <option value="Ground ATV">Ground ATV</option>
+                </select>
+              </div><!-- /input-group -->
+          </div>
+        </div>
+      </div>
+
+      <div class="card__button">
+        <a class="card__link btn btn--big btn--orange" 
+           href="#" 
+           next="card--battleground">
+          <span class="btn__prompt">></span>
+          <span class="btn__text">let war begin</span>
+        </a>
+      </div>
+    </section>
+  
+    <section id="battleground" class="card card--battleground">
+      <div class="card__prompt">
+        <div>Battleground</div>
+        <div>
+          <a class="card__back btn btn--small" 
+             href="#"
+             previous="card--name">
+            <span class="btn__prompt">&lt;</span>
+            <span class="btn__text">Back</span>
+          </a>          
+        </div>
+      </div>
+
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="progress-wrap progress" id="playerAWrap" data-progress-percent="25">
+              <div class="progress-bar progress" id="playerAProgress"></div>
+            </div>
+            <div class="card__button">
+              <a class="btn btn--big btn--blue" href="#">
+                <span class="btn__text">Player A</span>
+              </a>
+              <div class="playerA-profile caption">
+              </div>
+            </div>      
+          </div>
+          <div class="col-sm-4">
+            <div class="card__button">
+              <a class="btn btn--big btn--yellow" href="#">
+                <span class="btn__text round">Round 1</span>
+              </a>
+      <div class="card__button">
+        <a class="card_fight btn btn--big btn--green" href="#" next="">
+          <span class="btn__text">Attack</span>
+        </a>
+      </div>
+              <div class="livereport"></div>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="progress-wrap progress" id="playerBWrap" data-progress-percent="25">
+              <div class="progress-bar progress" id="playerBProgress"></div>
+            </div> 
+            <div class="card__button">
+              <a class="btn btn--big btn--blue" href="#">
+                <span class="btn__text">Player B</span>
+              </a>
+              <div class="playerB-profile caption">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </article>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="dist/bundle.js" type="text/javascript" charset="utf-8" async defer></script>
+<!--   <script src="javascripts/model.js" type="text/javascript" charset="utf-8" async defer></script>
+  <script src="javascripts/robot.js" type="text/javascript" charset="utf-8" async defer></script>
+  <script src="javascripts/player.js" type="text/javascript" charset="utf-8" async defer></script>
+  <script src="javascripts/main.js" type="text/javascript" charset="utf-8" async defer></script>
+ -->  
+</body>
+</html>
